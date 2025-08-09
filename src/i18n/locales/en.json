@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Itsara Itsarangkura Na Ayuttaya",
+    "subtitle": "Digital Communications Specialist",
+    "description": "Experienced Digital Communications professional with expertise in content creation and corporate communications",
+    "cta": "View My Work",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a digital communications specialist passionate about content creation and strategic communication. With experience in Digital Communications and expertise in various tools and platforms.",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "current": "Present",
+    "year": "Year"
+  },
+  "skills": {
+    "title": "Skills & Capabilities",
+    "core": "Core Skills",
+    "tools": "Tools & Software",
+    "cybersecurity": "Cybersecurity",
+    "operations": "Operations"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewMore": "View More",
+    "seeMore": "See More",
+    "seeLess": "See Less"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's Degree",
+    "major": "Major",
+    "university": "University",
+    "gpa": "GPA"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Ready for new opportunities and collaborations",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2024 Itsara Itsarangkura Na Ayuttaya. All rights reserved."
+  }
+}
