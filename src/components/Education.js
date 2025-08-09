@@ -148,7 +148,7 @@ const Education = () => {
       ]
     },
     {
-      category: i18n.language === 'th' ? 'ทักษะการสื่อสار' : 'Communication Skills',
+      category: i18n.language === 'th' ? 'ทักษะการสื่อสาร' : 'Communication Skills',
       items: [
         i18n.language === 'th' ? 'การสื่อสารองค์กร' : 'Corporate Communications',
         i18n.language === 'th' ? 'การประชาสัมพันธ์' : 'Public Relations',
