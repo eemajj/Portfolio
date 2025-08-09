@@ -1,35 +1,51 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-
   "rewrites": [
-    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+    { "source": "/sw.js", "destination": "/sw.js" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
+    { "source": "/manifest.json", "destination": "/manifest.json" },
+
+    { "source": "/static/:path*", "destination": "/static/:path*" },
+    { "source": "/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/images/:path*", "destination": "/images/:path*" },
+    { "source": "/fonts/:path*", "destination": "/fonts/:path*" },
+
+    { "source": "/:path*", "destination": "/index.html" }
   ],
 
   "headers": [
     {
-      "source": "/:path*\\.(?:js|css|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|otf)",
+      "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
       ]
     },
+
+    { "source": "/index.html", "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+    ]},
+
+    { "source": "/:path*.js",   "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.css",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.png",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.jpg",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.jpeg", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.gif",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.svg",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.webp", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.ico",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.woff", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.woff2","headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.ttf",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+    { "source": "/:path*.otf",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]},
+
     {
       "source": "/sw.js",
       "headers": [
         { "key": "Service-Worker-Allowed", "value": "/" },
         { "key": "Cache-Control", "value": "no-cache" }
-      ]
-    },
-    {
-      "source": "/((?!.*\\.).*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
       ]
     }
   ]
