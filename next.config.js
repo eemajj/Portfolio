@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    remotePatterns: [],
-    formats: ['image/avif', 'image/webp'],
-  },
-  experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react'],
+    unoptimized: true,
   },
 };
 
