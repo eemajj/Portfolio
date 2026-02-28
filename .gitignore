@@ -10,6 +10,7 @@
 
 # production
 /build
+/.next
 
 # misc
 .DS_Store
@@ -34,6 +35,8 @@ lerna-debug.log*
 # OS generated files
 Thumbs.db
 .DS_Store
+._*
+._.DS_Store
 
 # Optional eslint cache
 .eslintcache

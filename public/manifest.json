@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Itsara Portfolio",
+  "name": "Itsara Itsarangkura Na Ayuttaya - Digital Communications Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#16a34a",
+  "background_color": "#ffffff",
+  "description": "Digital Communications Specialist | Public Relations Practitioner | Bangkok Metropolitan Administration"
 }

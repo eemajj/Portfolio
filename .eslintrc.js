@@ -5,8 +5,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'react-app',
-    'react-app/jest'
+    'next/core-web-vitals',
+    'prettier'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -15,29 +15,18 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
   rules: {
-    // Disable unused vars warning for React import (common with JSX Transform)
-    'no-unused-vars': ['warn', { 
+    'no-unused-vars': ['warn', {
       'varsIgnorePattern': '^React$',
       'argsIgnorePattern': '^_'
     }],
-    // Allow console statements in development
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    // Prefer const over let when possible
+    'no-console': 'warn',
     'prefer-const': 'error',
-    // Ensure consistent spacing
     'object-curly-spacing': ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
-    // Semicolon rules
     'semi': ['error', 'always'],
-    // Quote consistency
     'quotes': ['error', 'single', { 'avoidEscape': true }],
-    // Trailing comma
     'comma-dangle': ['error', 'never'],
-    // Consistent function declarations
     'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }]
   }
 };

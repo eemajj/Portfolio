@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2021"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    "app",
+    ".next/types/**/*.ts"
+  ],
+  "references": [],
+  "exclude": [
+    "node_modules"
+  ]
+}
