@@ -14,28 +14,49 @@
     "i18next": "^23.2.3",
     "i18next-browser-languagedetector": "^7.1.0",
     "lucide-react": "^0.263.1",
+    "next": "^14.2.4",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.1",
-    "react-scripts": "^5.0.1",
-    "tailwindcss": "^3.3.0",
-    "web-vitals": "^2.1.4"
+    "swiper": "^11.2.10",
+    "tailwindcss": "^3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"No tests configured\"",
     "deploy": "./deploy.sh",
-    "preview": "npm run build && npx serve -s build",
-    "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js"
+    "deploy:vercel": "vercel --prod",
+    "preview": "npm run build && npm run start",
+    "lighthouse": "lhci autorun",
+    "lint": "eslint \"{app,src}/**/*.{js,jsx,ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "lint-staged": {
+    "{app,src}/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{app,src}/**/*.{css,scss,md}": [
+      "prettier --write"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
   },
   "browserslist": {
     "production": [
